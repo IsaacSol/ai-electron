@@ -1,0 +1,23 @@
+{
+  "name": "ai-electron",
+  "version": "1.0.0",
+  "description": "Electron app that utilizes ChatGPT to simplify lengthy documents",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacSol/ai-electron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsaacSol/ai-electron/issues"
+  },
+  "homepage": "https://github.com/IsaacSol/ai-electron#readme",
+  "devDependencies": {
+    "electron": "^23.2.1"
+  }
+}
