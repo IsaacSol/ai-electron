@@ -14,8 +14,11 @@ function createWindow() {
     ipcMain.on('sendFile', async (request, data)=> {
         console.log(data.toString())
         const file = await fs.readFile(`${data}`, (error, data)=> {
-            console.log(`${__dirname}/temp/`)
-            fs.writeFileSync(`${__dirname}/temp/test.txt`, data)
+            console.log(data)
+            const writeStream = fs.createWriteStream(`temp/test.txt`);
+            writeStream.write(data);
+            writeStream.end();
+            //fs.writeFile(`${__dirname}/temp/test.txt`, data)
         })
         
     })
