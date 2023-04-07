@@ -1,0 +1,37 @@
+body {
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    overflow: hidden;
+}
+
+#optionsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+#outputContainer {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    height: 75%;
+    min-height: 240px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+#prompt {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    border: none;
+    margin: 0%;
+    padding: 0%;
+    height: 10%;
+    width: 100%;
+    background-color: aliceblue;
+}

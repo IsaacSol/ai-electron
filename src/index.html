@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title id="pageTitle">Hello World!</title>
   </head>
   <body>
-    <input id="uploadInput" type="file">Upload PDF</input>
+    <div id="optionsContainer">
+      <input id="uploadInput" type="file">Upload PDF</input>
+    </div>
+    <div id="outputContainer"></div>
+    <textarea id="prompt" placeholder="User prompt"></textarea>
     <script src="./frontend-scripts/upload.js"></script>
   </body>
 </html>
