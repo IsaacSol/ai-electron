@@ -11,14 +11,13 @@ function createWindow() {
           },
     })
 
-    ipcMain.on('sendFile', async (request, data)=> {
-        console.log(data.toString())
-        const file = await fs.readFile(`${data}`, (error, data)=> {
-            console.log(data)
-            const writeStream = fs.createWriteStream(`temp/test.txt`);
+    ipcMain.on('sendFile', async (request, filePath)=> {
+        const file = await fs.readFile(`${filePath}`, (error, data)=> {
+            const fileName_arr = filePath.split("/")
+            const writeStream = fs.createWriteStream(`temp/${fileName_arr[fileName_arr.length - 1]}`);
             writeStream.write(data);
             writeStream.end();
-            //fs.writeFile(`${__dirname}/temp/test.txt`, data)
+            
         })
         
     })

@@ -19,5 +19,9 @@
   "homepage": "https://github.com/IsaacSol/ai-electron#readme",
   "devDependencies": {
     "electron": "^23.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "langchain": "^0.0.49"
   }
 }
