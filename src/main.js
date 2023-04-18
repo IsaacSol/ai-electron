@@ -1,7 +1,9 @@
 const {app, BrowserWindow, ipcMain, Menu} = require('electron')
 const fs = require('fs')
 const path = require('path')
+const testPrompt = require('./backend-scripts/langchain.js');
 
+testPrompt()
 function createWindow() {
     const window = new BrowserWindow({
         height: 600,

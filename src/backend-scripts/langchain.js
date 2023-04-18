@@ -1,7 +1,17 @@
-const { OpenAI } = require("langchain/llms");
-require('dotenv').config()
+const { OpenAI } = require("langchain/llms/openai");
+require('dotenv').config();
+const { PromptTemplate } = require("langchain/prompts");
 
-const res = await model.call(
-    "What would be a good company name a company that makes colorful socks?"
-  );
+const template = "What is a good name for a company that makes {product}?";
+const prompt = new PromptTemplate({
+  template: template,
+  inputVariables: ["product"],
+});
+
+async function testPrompt(){ 
+  const res = await prompt.format({ product: "colorful socks" });
   console.log(res);
+}
+module.exports = {
+  testPrompt,
+}
