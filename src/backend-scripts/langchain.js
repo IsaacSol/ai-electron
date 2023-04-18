@@ -1,4 +1,4 @@
-const { OpenAI } = require("langchain/llms/openai");
+const { OpenAI } = require("langchain");
 require('dotenv').config();
 const { PromptTemplate } = require("langchain/prompts");
 
